@@ -1,0 +1,20 @@
+{
+  "name": "oopsla",
+  "version": "1.0.0",
+  "description": "OOPSLA 2025 presentation",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "author": "Tom Lauwaerts",
+  "license": "ISC",
+  "devDependencies": {
+    "@catppuccin/highlightjs": "^1.0.1",
+    "gh-pages": "^6.3.0",
+    "reveal.js": "^5.2.1",
+    "vite": "^7.1.3"
+  }
+}
