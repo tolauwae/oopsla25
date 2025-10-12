@@ -15,3 +15,38 @@
     opacity: .15;
     visibility: inherit;
 }
+
+.reveal .fragment.dim {
+    opacity: 1.0;
+    visibility: inherit;
+}
+
+.reveal .fragment.dim.visible {
+    opacity: 0.33 !important;
+}
+
+.reveal .fragment.zoom13 {
+  transform: translateY(37%) scale(0);
+
+}
+
+.reveal .fragment.zoom13.visible {
+  transform: translateY(0) scale(1);
+}
+
+.reveal .fragment.blur-in {
+    filter: blur(5px);
+}
+
+.reveal .fragment.blur-in.visible {
+    filter: none;
+}
+
+.reveal .fragment.blur-out {
+    filter: none;
+}
+
+.reveal .fragment.blur-out.visible {
+    filter: blur(5px);
+}
+

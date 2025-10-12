@@ -116,7 +116,7 @@ TODO
                      alt="Clion"/>
 
                 <!-- Stepping through program -->
-                <img class="shadow fragment rounded"
+                <img class="shadow fragment rounded fade-in-then-out"
                      data-fragment-index="1"
                      style="background-color: #e6e9ef; width: 800px"
                      src="static/clion-debugger.png"
@@ -146,10 +146,54 @@ TODO
             <h1>How did we build MIO?</h1>
         </section>
 
-        <section class="" data-auto-animate>
+        <section>
+        <!-- tech stack: open bot brain (hardware) + zephyr (RTOS) + warduino (VM) + MIO (backend) + MIO frontend (Kotlin) -->
+        </section>
+
+        <!-- NOTE
+        **BRIDGE:** WebAssembly helps with the formalization of our technique ...
+
+        It is important for debuggers targetted at debugging non-deterministic programs that the observe the same behavior as the normal execution.
+        The original multiverse debugger GraphRedex proved that it exactly showed the same states as could be observed by the program semantics.
+Proving somthing similar here is rather complicated since we are now working without a model but an exact execution, and on top of that we are reversing output actions.
+
+        However, we have found a way to define the same kind of correctness criteria for our concrete multiverse debugger, and have split this into two theorems.
+
+        theorem 1 ... holds for our because ...
+
+        theorem 2 ... holds for our because ...
+        -->
+        <section class="">
+            <div class="r-stack">
+                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="static/noninterference-full.png" />
+                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="static/noninterference-zoom.png" />
+            </div>
+            <div class="citation">
+                <img class="tiny logo" src="static/ecoop-logo.png" />
+                <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="max-width: 75%" src="static/theorem1.png"/>
+            </div>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="max-width: 75%" src="static/theorem2.png"/>
+            </div>
+        </section>
+
+        <section>
+        <!-- primitives: requirements (show by memorable examples instead of bullet points) -->
+        </section>
+
+        <!--<section class="" data-auto-animate>
             <h1>How did we build MIO?</h1>
             <img class="" style="width: 60%" src="static/overview.png"/>
-        </section>
+        </section>-->
 
         <section data-auto-animate data-auto-animate-restart="">
             <div class="r-stack">
@@ -175,20 +219,15 @@ TODO
             </div>
         </section>
 
-        <section class="">
-            <h1>Proof correctness</h1>
+        <section>
+          <div class="r-stack">
+            <img class="" style="width: 75%" src="static/figure13-start.svg"/>
+            <img class="fragment custom zoom13" style="width: 75%" src="static/figure13-zoom.svg"/>
+          </div>
         </section>
 
         <section>
-            <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/theorem1.png"/>
-            </div>
-        </section>
-
-        <section>
-            <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/theorem2.png"/>
-            </div>
+            <img class="" style="width: 60%" src="static/figure14.svg"/>
         </section>
 
         <section class="title chapter" data-auto-animate data-background-image="./static/oopsla-background.png">
