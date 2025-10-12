@@ -5,6 +5,14 @@
     src: local("UGent Panno Text");
 }
 
+.black .io {
+    color: white;
+}
+
+.black, .black h1, .black h2, .black *, .black ul {
+    color: black
+}
+
 .title,
 .title h1,
 .title h2,
@@ -18,7 +26,24 @@
     font-weight: normal;
 }
 
-.normal h1, .normal h2, .normal h3, .normal h4 {
+.reveal .normal h1 {
+    font-size: 2em;
+}
+
+.reveal .normal ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.reveal .normal li {
+    display: inline;
+}
+
+.reveal .normal h2 {
+    font-size: 1.5em;
+}
+
+.reveal .normal h1, .reveal .normal h2, .reveal .normal h3, .reveal .normal h4 {
     font-family: "STIX Two Text", serif;
     font-style: italic;
 }
@@ -55,6 +80,10 @@ h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
 
 .blue h1, .blue h2 {
     color: white;
+}
+
+.blued {
+    color: #1E64C8;
 }
 
 video {
@@ -115,7 +144,7 @@ section.absolute {
 
 div.attribution {
     color: white;
-    font-size: 0.2vw;
+    font-size: 12px;
     position: absolute;
     bottom: 0;
     left: 0;

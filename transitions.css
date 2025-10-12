@@ -1,0 +1,17 @@
+.reveal .fragment.spotlight {
+    color: black;
+}
+
+.reveal .fragment.spotlight.visible {
+    color: #1E64C8;
+}
+
+.reveal .fragment.deemphasize {
+    opacity: 1;
+    visibility: inherit;
+}
+
+.reveal .fragment.deemphasize.visible {
+    opacity: .15;
+    visibility: inherit;
+}

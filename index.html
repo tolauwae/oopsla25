@@ -5,8 +5,7 @@
 
     <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="internal.css"/>
-    <link rel="stylesheet" href="fragments.css"/>
+    <link rel="stylesheet" href="transitions.css"/>
 </head>
 <body>
 
@@ -29,13 +28,15 @@ TODO
             <!-- <img id="ugent" class="logo" src="static/ugent.png"  alt="Ghent University" /> -->
         </section>
 
-        <section class="absolute"
+        <!--
+        <section class=""
                  data-transition="none"
-                 data-background-video="static/marvel.mp4"
+                 data-background-video="static/joke.mp4"
                  data-background-video-loop
                  data-background-video-muted>
-          <h3>marvel video</h3>
+            <img class="fragment fade-in" src="static/copyright-symbol.png"/>
         </section>
+        -->
 
         <section>
             <img class="shadow pdf" src="static/ecoop.png" />
@@ -80,12 +81,56 @@ TODO
             </div>
         </section>
 
-        <section class="normal">
-            <h1>MIO</h1>
-            <h2><span class="light">/maː.joː/</span> a Multiverse debugger for I/O</h2>
+        <section class="normal" data-auto-animate>
+            <h1><ul><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
+            <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
         </section>
 
-        <section data-auto-animate data-auto-animate-restart>
+        <section class="normal black" data-auto-animate data-background-color="black">
+            <h1><ul><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
+            <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
+        </section>
+
+        <!--
+        <section class="normal black" data-auto-animate data-background-color="black">
+            <h1><ul><li class="io">M</li><li class="io">I</li><li class="io">CONTR</li><li class="io">O</li><li class="io">LLERS</li></ul></h1>
+            <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span>I/O</span></h2>
+        </section>
+
+        <section class="normal black" data-auto-animate data-background-image="static/espressifboard.jpg">
+            <h1><ul><li class="io">M</li><li class="io">I</li><li class="io">CONTR</li><li class="io">O</li><li class="io">LLERS</li></ul></h1>
+            <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span>I/O</span></h2>
+        </section>
+        -->
+
+        <section data-background-image="static/espressifboard.jpg" class="absolute" data-transition="none">
+            <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div>
+        </section>
+
+        <section class="normal">
+            <!-- IDE -->
+            <div class="r-stack">
+                <img class="shadow fragment custom dim"
+                     data-fragment-index="1"
+                     src="static/clion.png"
+                     alt="Clion"/>
+
+                <!-- Stepping through program -->
+                <img class="shadow fragment rounded"
+                     data-fragment-index="1"
+                     style="background-color: #e6e9ef; width: 800px"
+                     src="static/clion-debugger.png"
+                     alt="Clion debugger"/>
+
+                <img class="shadow fragment rounded"
+                     data-fragment-index="2"
+                     style="background-color: #eff1f5; max-width: 650px"
+                     src="static/clion-debugging.gif"
+                     alt="Clion step by step"/>
+            </div>
+        </section>
+
+        <section data-auto-animate-restart>
             <img class="shadow" style="max-width: 75%" src="static/mio.png"/>
         </section>
 
@@ -106,21 +151,21 @@ TODO
             <img class="" style="width: 60%" src="static/overview.png"/>
         </section>
 
-        <section class="">
-            <h1>Start with a base language</h1>
-        </section>
-
-        <section class="">
-            <h1>Ensure I/O is well-behaved</h1>
-        </section>
-
-        <section class="">
-            <h1>Define debugger semantics</h1>
-        </section>
-
-        <section>
+        <section data-auto-animate data-auto-animate-restart="">
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/backwardsstep.png"/>
+                <img class="" style="max-width: 75%" src="static/figure8/step2.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step4.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step5.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step6.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step7.png"/>
+                <img class="fragment fade-in" data-id="figure8" style="max-width: 75%" src="static/figure8/step8.png"/>
+            </div>
+        </section>
+
+        <section data-auto-animate="">
+            <div class="">
+                <img class="" data-id="figure8" style="max-width: 75%" src="static/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="static/figure9.png"/>
             </div>
         </section>
 
