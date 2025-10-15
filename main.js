@@ -2,6 +2,7 @@ import 'reveal.js/dist/reveal.css'
 import 'reveal.js/dist/theme/white.css';
 import '@catppuccin/highlightjs/css/catppuccin-latte.css'
 import './styles.css'
+import './transitions.css'
 
 import Reveal from 'reveal.js';
 import RevealMath from 'reveal.js/plugin/math/math.esm';
@@ -15,8 +16,8 @@ deck.initialize({
   showSlideNumber: 'all',
   controls: false,
   progress: false,
-  width: 1500,
-  height: 843.75,
+  //width: 1500,
+  //height: 843.75,
   // view: 'scroll',
   // scrollProgress: true,
   // transition: 'fade',

@@ -4,8 +4,6 @@
     <title>presentation</title>
 
     <script type="module" src="/main.js"></script>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="transitions.css"/>
 </head>
 <body>
 
@@ -20,35 +18,35 @@ TODO
 <div class="reveal">
     <div class="slides">
 
-        <section class="title chapter" data-auto-animate data-background-image="./static/oopsla-background.png">
+        <section class="title chapter" data-auto-animate data-background-image="/oopsla-background.png">
             <h1>MIO: Multiverse Debugging in the Face of Input/Output</h1>
 
             <p class="authors"><b>Tom&nbsp;Lauwaerts</b>, Maarten&nbsp;Steevens, Christophe&nbsp;Scholliers</p>
             <!-- <a class="invisible link" href="https://www.ugent.be/"> -->
-            <!-- <img id="ugent" class="logo" src="static/ugent.png"  alt="Ghent University" /> -->
+            <!-- <img id="ugent" class="logo" src="/ugent.png"  alt="Ghent University" /> -->
         </section>
 
         <!--
         <section class=""
                  data-transition="none"
-                 data-background-video="static/joke.mp4"
+                 data-background-video="/joke.mp4"
                  data-background-video-loop
                  data-background-video-muted>
-            <img class="fragment fade-in" src="static/copyright-symbol.png"/>
+            <img class="fragment fade-in" src="/copyright-symbol.png"/>
         </section>
         -->
 
         <section>
-            <img class="shadow pdf" src="static/ecoop.png" />
+            <img class="shadow pdf" src="/ecoop.png" />
             <div class="citation">
-                <img class="tiny logo" src="static/ecoop-logo.png" />
+                <img class="tiny logo" src="/oopsla/ecoop-logo.png" />
                 <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
             </div>
         </section>
 
         <section class="absolute"
                  data-transition="none"
-                 data-background-video="static/graphredex.mp4"
+                 data-background-video="/oopsla/graphredex.mp4"
                  data-background-video-loop
                  data-background-video-muted>
            <!-- <video controls
@@ -56,7 +54,7 @@ TODO
                    data-autoplay
                    muted
                    style="background-color: #eff1f5; object-fit: fill; width: 95%; max-width: 100%; max-height: 100%; height: 95%"
-                   src="static/graphredex.mp4"></video>-->
+                   src="/graphredex.mp4"></video>-->
         </section>
 
         <section class="normal">
@@ -64,17 +62,17 @@ TODO
             <div class="r-stack">
                 <img class="shadow pdf"
                      style="margin-left: 15vw; margin-top: 0vw"
-                     src="static/uml-debugging.png"
+                     src="/uml-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
                      style="margin-left: 20vw; margin-top: 7vw"
-                     src="static/temporal-debugging.png"
+                     src="/temporal-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
                      style="margin-left: 25vw; margin-top: 14vw"
-                     src="static/latest-multiverse.png"
+                     src="/latest-multiverse.png"
                      alt=""/>
             </div>
             <div class="citation">
@@ -97,13 +95,13 @@ TODO
             <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span>I/O</span></h2>
         </section>
 
-        <section class="normal black" data-auto-animate data-background-image="static/espressifboard.jpg">
+        <section class="normal black" data-auto-animate data-background-image="/espressifboard.jpg">
             <h1><ul><li class="io">M</li><li class="io">I</li><li class="io">CONTR</li><li class="io">O</li><li class="io">LLERS</li></ul></h1>
             <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span>I/O</span></h2>
         </section>
         -->
 
-        <section data-background-image="static/espressifboard.jpg" class="absolute" data-transition="none">
+        <section data-background-image="/oopsla/espressifboard.jpg" class="absolute" data-transition="none">
             <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div>
         </section>
 
@@ -112,26 +110,26 @@ TODO
             <div class="r-stack">
                 <img class="shadow fragment custom dim"
                      data-fragment-index="1"
-                     src="static/clion.png"
+                     src="/clion.png"
                      alt="Clion"/>
 
                 <!-- Stepping through program -->
                 <img class="shadow fragment rounded fade-in-then-out"
                      data-fragment-index="1"
                      style="background-color: #e6e9ef; width: 800px"
-                     src="static/clion-debugger.png"
+                     src="/clion-debugger.png"
                      alt="Clion debugger"/>
 
                 <img class="shadow fragment rounded"
                      data-fragment-index="2"
                      style="background-color: #eff1f5; max-width: 650px"
-                     src="static/clion-debugging.gif"
+                     src="/clion-debugging.gif"
                      alt="Clion step by step"/>
             </div>
         </section>
 
         <section data-auto-animate-restart>
-            <img class="shadow" style="max-width: 75%" src="static/mio.png"/>
+            <img class="shadow" style="max-width: 75%" src="/mio.png"/>
         </section>
 
         <section>
@@ -139,7 +137,7 @@ TODO
                    data-loop
                    data-autoplay
                    style="background-color: #eff1f5; object-fit: fill; width: 95%; max-width: 100%; max-height: 100%; height: 95%"
-                   src="static/demo.mp4"></video>
+                   src="/oopsla/demo.mp4"></video>
         </section>
 
         <section class="" data-auto-animate>
@@ -167,24 +165,24 @@ Proving somthing similar here is rather complicated since we are now working wit
         -->
         <section class="">
             <div class="r-stack">
-                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="static/noninterference-full.png" />
-                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="static/noninterference-zoom.png" />
+                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="/noninterference-full.png" />
+                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="/noninterference-zoom.png" />
             </div>
             <div class="citation">
-                <img class="tiny logo" src="static/ecoop-logo.png" />
+                <img class="tiny logo" src="/ecoop-logo.png" />
                 <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
             </div>
         </section>
 
         <section>
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/theorem1.png"/>
+                <img class="" style="max-width: 75%" src="/theorem1.png"/>
             </div>
         </section>
 
         <section>
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/theorem2.png"/>
+                <img class="" style="max-width: 75%" src="/theorem2.png"/>
             </div>
         </section>
 
@@ -194,85 +192,85 @@ Proving somthing similar here is rather complicated since we are now working wit
 
         <!--<section class="" data-auto-animate>
             <h1>How did we build MIO?</h1>
-            <img class="" style="width: 60%" src="static/overview.png"/>
+            <img class="" style="width: 60%" src="/overview.png"/>
         </section>-->
 
         <section data-auto-animate data-auto-animate-restart="">
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/figure8/step2.png"/>
-                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step4.png"/>
-                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step5.png"/>
-                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step6.png"/>
-                <img class="fragment fade-in" style="max-width: 75%" src="static/figure8/step7.png"/>
-                <img class="fragment fade-in" data-id="figure8" style="max-width: 75%" src="static/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure8/step2.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step4.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step5.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step6.png"/>
+                <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step7.png"/>
+                <img class="fragment fade-in" data-id="figure8" style="max-width: 75%" src="/figure8/step8.png"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%" src="static/figure8/step8.png"/>
-                <img class="" style="max-width: 75%" src="static/figure9.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%" src="/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure9.svg"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="static/figure8/step8.png"/>
-                <img class="" style="max-width: 75%" src="static/figure9-step1.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure9-step1.svg"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="static/figure8/step8.png"/>
-                <img class="" style="max-width: 75%" src="static/figure9-step2.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure9-step2.svg"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="static/figure8/step8.png"/>
-                <img class="" style="max-width: 75%" src="static/figure9-step3.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure9-step3.svg"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="static/figure8/step8.png"/>
-                <img class="" style="max-width: 75%" src="static/figure9-stepback.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/>
+                <img class="" style="max-width: 75%" src="/figure9-stepback.svg"/>
             </div>
         </section>
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="static/figure8/step8.png"/> <!-- TODO highlight arrows -->
-                <img class="" style="max-width: 75%" src="static/figure9-stepbackcompensate.svg"/>
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/> <!-- TODO highlight arrows -->
+                <img class="" style="max-width: 75%" src="/figure9-stepbackcompensate.svg"/>
             </div>
         </section>
 
         <section>
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="static/slide.png"/>
+                <img class="" style="max-width: 75%" src="/slide.png"/>
             </div>
         </section>
 
         <section>
           <div class="r-stack">
-            <img class="" style="width: 75%" src="static/figure13-start.svg"/>
-            <img class="fragment custom zoom13" style="width: 75%" src="static/figure13-zoom.svg"/>
+            <img class="" style="width: 75%" src="/figure13-start.svg"/>
+            <img class="fragment custom zoom13" style="width: 75%" src="/figure13-zoom.svg"/>
           </div>
         </section>
 
         <section>
-            <img class="" style="width: 60%" src="static/figure14.svg"/>
+            <img class="" style="width: 60%" src="/figure14.svg"/>
         </section>
 
-        <section class="title chapter" data-auto-animate data-background-image="./static/oopsla-background.png">
+        <section class="title chapter" data-auto-animate data-background-image="/oopsla-background.png">
             <h1>MIO: Multiverse Debugging in the Face of Input/Output</h1>
 
             <p class="authors"><b>Tom&nbsp;Lauwaerts</b>, Maarten&nbsp;Steevens, Christophe&nbsp;Scholliers</p>
             <!-- <a class="invisible link" href="https://www.ugent.be/"> -->
-            <!-- <img id="ugent" class="logo" src="static/ugent.png"  alt="Ghent University" /> -->
+            <!-- <img id="ugent" class="logo" src="/ugent.png"  alt="Ghent University" /> -->
         </section>
 
     </div>
