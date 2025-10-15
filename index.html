@@ -61,17 +61,17 @@ TODO
             <!-- Papers -->
             <div class="r-stack">
                 <img class="shadow pdf"
-                     style="margin-left: 15vw; margin-top: 0vw"
+                     style="margin-left: 5vw; margin-top: 0vw"
                      src="/uml-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
-                     style="margin-left: 20vw; margin-top: 7vw"
+                     style="margin-left: 10vw; margin-top: 7vw"
                      src="/temporal-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
-                     style="margin-left: 25vw; margin-top: 14vw"
+                     style="margin-left: 15vw; margin-top: 14vw"
                      src="/latest-multiverse.png"
                      alt=""/>
             </div>
@@ -129,26 +129,45 @@ TODO
         </section>
 
         <section data-auto-animate-restart>
-            <img class="shadow" style="max-width: 75%" src="/mio.png"/>
+            <img class="shadow" src="/mio.png"/>
         </section>
 
         <section>
             <video controls
                    data-loop
                    data-autoplay
-                   style="background-color: #eff1f5; object-fit: fill; width: 95%; max-width: 100%; max-height: 100%; height: 95%"
+                   style="background-color: #eff1f5; object-fit: fill;"
                    src="/demo.mp4"></video>
         </section>
 
         <section class="" data-auto-animate>
-            <h1>How did we build MIO?</h1>
+            <img class="shadow" src="/mio.png"/>
         </section>
 
-        <section>
-        <!-- tech stack: open bot brain (hardware) + zephyr (RTOS) + warduino (VM) + MIO (backend) + MIO frontend (Kotlin) -->
-        <!-- BUT also esp32 with zephyr -->
-        <!-- TODO -->
+        <section data-auto-animate>
+            <h1>How did we build MIO?</h1>
+            
+            <div class="r-stack">
+                <img class="shadow fragment custom blur-out" data-fragment-index="1" src="/mio.png"/>
+                <img class="fragment fade-in" style="max-width: 14vw" data-fragment-index="1" src="/OBB-logo.svg" />
+                <img class="fragment fade-in" style="max-width: 15vw" data-fragment-index="2" src="/warduino-logo.png" />
+            </div>
         </section>
+
+        <!-- TODO
+
+        <section class="techstack">
+        tech stack: open bot brain (hardware) + zephyr (RTOS) + warduino (VM) + MIO (backend) + MIO frontend (Kotlin)
+        BUT also esp32 with zephyr
+        TODO
+          <img src="/OBB-logo.svg" />
+          <h2>Zephyr</h2>
+          <img src="/warduino-logo.png" />
+          <h2>MIO</h2>
+        </section>
+
+        -->
+
 
         <!-- NOTE
         **BRIDGE:** WebAssembly helps with the formalization of our technique ...
@@ -186,9 +205,11 @@ Proving somthing similar here is rather complicated since we are now working wit
             </div>
         </section>
 
+<!-- TODO
         <section>
-        <!-- primitives: requirements (show by memorable examples instead of bullet points) -->
+        primitives: requirements (show by memorable examples instead of bullet points)
         </section>
+ -->
 
         <!--<section class="" data-auto-animate>
             <h1>How did we build MIO?</h1>

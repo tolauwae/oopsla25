@@ -40,12 +40,25 @@
 }
 
 .reveal .normal h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .reveal .normal h1, .reveal .normal h2, .reveal .normal h3, .reveal .normal h4 {
     font-family: "STIX Two Text", serif;
     font-style: italic;
+}
+
+.reveal .techstack {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.reveal .techstack img {
+  width: 70px;
+}
+
+.reveal .techstack h2 {
 }
 
 h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
@@ -132,9 +145,8 @@ img.pdf {
 .citation {
     color: rgba(0, 0, 0, 0.3);
     font-style: italic;
-    font-size: 0.4em;
+    font-size: 0.3em;
     text-align: left;
-    padding: 5pt 15vw 0;
 }
 
 section.absolute {
@@ -144,7 +156,7 @@ section.absolute {
 
 div.attribution {
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     position: absolute;
     bottom: 0;
     left: 0;
