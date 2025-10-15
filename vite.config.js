@@ -1,3 +1,3 @@
 export default {
-    "base": "/oopsla"
+    "base": "/oopsla25"
 }
