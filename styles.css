@@ -67,9 +67,12 @@ h1.sans, h2.sans, h3.sans, h4.sans, h5.sans {
 }
 
 .reveal h1 {
-    font-size: 52pt;
     text-transform: none;
     font-weight: bold;
+}
+
+.title h1 {
+    font-size: 2.3em;
 }
 
 .title h2 {
@@ -137,7 +140,7 @@ span.light {
 }
 
 img.pdf {
-    max-width: 35%;
+    max-width: 45%;
     padding: 3vw 5vw 3vw;
     background-color: white;
 }
@@ -145,7 +148,7 @@ img.pdf {
 .citation {
     color: rgba(0, 0, 0, 0.3);
     font-style: italic;
-    font-size: 0.3em;
+    font-size: 16pt;
     text-align: left;
 }
 
@@ -156,7 +159,7 @@ section.absolute {
 
 div.attribution {
     color: white;
-    font-size: 10px;
+    font-size: 16px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -178,8 +181,8 @@ div.image {
     max-width: 30%;
 }
 
-.authors {
-    font-size: 0.8em;
+.author {
+  width: 30%;
 }
 
 div.citation {
@@ -198,4 +201,56 @@ img.logo {
 
 .tiny.logo {
     max-height: 3em;
+}
+
+pre, code {
+    width: 100%;
+    font-size: 0.7em;
+}
+
+.hljs-ln-n {
+    color: #6c6f85;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    border-radius: 50%;
+    font-size: 0.8em;
+    text-align: center;
+    border: 3px solid #d20f39;
+    color: #d20f39;
+    font-weight: bold;
+
+}
+
+#people {
+  padding: 0 20vw;
+}
+
+#people img {
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 90px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reveal ul {
+    list-style-type: none;
+}
+
+#challenges {
+    max-width: 10vw;
+    max-height: 10vw;
+}
+
+#challenges li {
+  width: 100%;
+  display: flex;
+}
+
+#challenges li p {
+    flex-grow: 1;
+    min-width: 50vw;
 }

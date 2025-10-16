@@ -7,14 +7,6 @@
 </head>
 <body>
 
-<!-- 
-TODO
-
-+ Add FWO logo (done)
-+ Download and cut graphredex video from youtube
-
--->
-
 <div class="reveal">
     <div class="slides">
 
@@ -26,13 +18,85 @@ TODO
             <!-- <img id="ugent" class="logo" src="/ugent.png"  alt="Ghent University" /> -->
         </section>
 
+        <section data-background-image="/oopsla25/espressifboard.jpg" class="absolute" data-transition="none" data-auto-animate>
+            <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div>
+        </section>
+
+
+        <!-- SLIDE problems hinten met LED voorbeeld uitleg -->
+
+        <!-- Temperature sensor example -->
+
+        <section>
+          <!-- data-background-image="/oopsla25/espressifboard.jpg" class="absolute" data-transition="none" data-auto-animate> -->
+          <div class="r-stack"> <!-- data-line-numbers="|6,9" -->
+          <pre><code data-trim data-noescape>
+function main(): void {
+    const lowThreshold = 1000; const highThreshold = 2000;
+    const temp = analogRead(sensor);
+    while (true) {
+      if (temp < lowThreshold) {
+          digitalWrite(blueLED, HIGH); digitalWrite(redLED, LOW);
+      }
+      else if (temp < highThreshold) {
+          digitalWrite(redLED, LOW); digitalWrite(redLED, LOW);
+      }
+      else {
+          digitalWrite(blueLED, LOW); digitalWrite(redLED, HIGH);
+      }
+    }
+}
+          </code>
+          </pre>
+          <!-- <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div> -->
+          </div>
+        </section>
+
+        <!-- SLIDE TODO problemen herhalen
+          + C1: exploring non-deterministic input in programs ON MICROCONTROLLERS
+            ... met mocking en multiverse kunnen we alles mooi zien maar output klopt niet als we terug gaan
+          + C2: je wilt kunnen achteruit stappen, maar hoe hou je dan uw output
+            ... dus maken we primitives met compensating actions
+          + C3: dat is niet efficient op mcu
+            ... dus spare snapshotting (uitleggen met arrows)
+          + C4: we willen ook een debugger die op 
+            ... en dit alles is correct: sound & complete
+        -->
+
+        <section> <!-- TODO styling -->
+          <blockquote>
+            <b>74%</b> of surveyed participants say that IoT developers rely on access to devices to test and debug.
+          </blockquote>
+
+          <div class="citation">
+            <p class="">Makhshari A., Mesbah A. (2021). IoT Bugs and Development Challenges. ICSE '21</p>
+          </div>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="fragment shadow rounded custom blur-out" data-fragment-index="1" src="/githubissue2021.png" />
+                <img class="fragment shadow rounded fade-in-then-out" data-fragment-index="1" src="/githubissue2021-icepack1.png" />
+                <img class="fragment shadow rounded fade-in" data-fragment-index="2" src="/githubissue2021-icepack2.png" />
+            </div>
+        </section>
+
+        <section>
+            <h1>Challenges in Debugging</h1>
+            <ul id="challenges" class="">
+                <li class="fragment"><img src="public/challenges/icepack.png" /> <p>Exploring non-deterministic input in programs on microcontrollers.</p></li>
+                <li class="fragment"><img src="public/challenges/reversibility.png" /> <p>How to get reverse debugging while keeping output consistent.</p></li>
+                <li class="fragment"><img src="public/challenges/microcontroller.png" /> <p>Microcontrollers have very few resources.</p></li>
+                <li class="fragment"><img src="public/challenges/formalism.png" /> <p>We want this debugger to be grounded on a sound formalism.</p></li>
+            </ul>
+        </section>
+
         <!--
-        <section class=""
+        <section class="absolute"
                  data-transition="none"
-                 data-background-video="/joke.mp4"
+                 data-background-video="/oopsla25/binarycounterloop.mp4"
                  data-background-video-loop
                  data-background-video-muted>
-            <img class="fragment fade-in" src="/copyright-symbol.png"/>
         </section>
         -->
 
@@ -61,17 +125,17 @@ TODO
             <!-- Papers -->
             <div class="r-stack">
                 <img class="shadow pdf"
-                     style="margin-left: 5vw; margin-top: 0vw"
+                     style="margin-left: 15vw; margin-top: 0"
                      src="/uml-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
-                     style="margin-left: 10vw; margin-top: 7vw"
+                     style="margin-left: 25vw; margin-top: 7vw"
                      src="/temporal-debugging.png"
                      alt=""/>
 
                 <img class="shadow fragment fade-left pdf"
-                     style="margin-left: 15vw; margin-top: 14vw"
+                     style="margin-left: 35vw; margin-top: 14vw"
                      src="/latest-multiverse.png"
                      alt=""/>
             </div>
@@ -79,15 +143,39 @@ TODO
             </div>
         </section>
 
-        <section class="normal" data-auto-animate>
+        <section class="normal">
             <h1><ul><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
             <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
         </section>
 
+        <section data-auto-animate>
+          <div class="r-stack">
+            <img class="fragment custom blur-out" data-id="mio" data-fragment-index="1" src="/mio-screenshot-large.png"/>
+            <img class="fragment fade-in-then-out" style="" data-fragment-index="1" src="/mock.png" />
+            <img class="fragment fade-in" style="" data-fragment-index="2" src="/mio-screenshot-tree.png" /> <!-- TODO make screenshot -->
+          </div>
+        </section>
+
+        <section data-auto-animate>
+            <h1>How did we build MIO?</h1>
+            
+            <div class="r-stack">
+                <img class="fragment custom blur-out" data-id="mio" data-fragment-index="1" src="/mio-screenshot-large.png"/>
+                <img class="fragment fade-in" style="max-width: 15vw" data-fragment-index="1" src="/warduino-logo.png" />
+            </div>
+        </section>
+
+        <section>
+            <img style="width: 50%" src="/debugstate.svg"/>
+            <img class="fragment" style="width: 50%" src="/snapshotdef.svg"/>
+        </section>
+
+        <!--
         <section class="normal black" data-auto-animate data-background-color="black">
             <h1><ul><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
             <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
         </section>
+        -->
 
         <!--
         <section class="normal black" data-auto-animate data-background-color="black">
@@ -101,19 +189,14 @@ TODO
         </section>
         -->
 
-        <section data-background-image="/oopsla25/espressifboard.jpg" class="absolute" data-transition="none">
-            <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div>
-        </section>
-
+        <!--
         <section class="normal">
-            <!-- IDE -->
             <div class="r-stack">
                 <img class="shadow fragment custom dim"
                      data-fragment-index="1"
                      src="/clion.png"
                      alt="Clion"/>
 
-                <!-- Stepping through program -->
                 <img class="shadow fragment rounded fade-in-then-out"
                      data-fragment-index="1"
                      style="background-color: #e6e9ef; width: 800px"
@@ -127,7 +210,9 @@ TODO
                      alt="Clion step by step"/>
             </div>
         </section>
+        -->
 
+        <!--
         <section data-auto-animate-restart>
             <img class="shadow" src="/mio.png"/>
         </section>
@@ -139,20 +224,8 @@ TODO
                    style="background-color: #eff1f5; object-fit: fill;"
                    src="/demo.mp4"></video>
         </section>
+        -->
 
-        <section class="" data-auto-animate>
-            <img class="shadow" src="/mio.png"/>
-        </section>
-
-        <section data-auto-animate>
-            <h1>How did we build MIO?</h1>
-            
-            <div class="r-stack">
-                <img class="shadow fragment custom blur-out" data-fragment-index="1" src="/mio.png"/>
-                <img class="fragment fade-in" style="max-width: 14vw" data-fragment-index="1" src="/OBB-logo.svg" />
-                <img class="fragment fade-in" style="max-width: 15vw" data-fragment-index="2" src="/warduino-logo.png" />
-            </div>
-        </section>
 
         <!-- TODO
 
@@ -168,42 +241,6 @@ TODO
 
         -->
 
-
-        <!-- NOTE
-        **BRIDGE:** WebAssembly helps with the formalization of our technique ...
-
-        It is important for debuggers targetted at debugging non-deterministic programs that the observe the same behavior as the normal execution.
-        The original multiverse debugger GraphRedex proved that it exactly showed the same states as could be observed by the program semantics.
-Proving somthing similar here is rather complicated since we are now working without a model but an exact execution, and on top of that we are reversing output actions.
-
-        However, we have found a way to define the same kind of correctness criteria for our concrete multiverse debugger, and have split this into two theorems.
-
-        theorem 1 ... holds for our because ...
-
-        theorem 2 ... holds for our because ...
-        -->
-        <section class="">
-            <div class="r-stack">
-                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="/noninterference-full.png" />
-                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="/noninterference-zoom.png" />
-            </div>
-            <div class="citation">
-                <img class="tiny logo" src="/ecoop-logo.png" />
-                <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
-            </div>
-        </section>
-
-        <section>
-            <div class="r-stack">
-                <img class="" style="max-width: 75%" src="/theorem1.png"/>
-            </div>
-        </section>
-
-        <section>
-            <div class="r-stack">
-                <img class="" style="max-width: 75%" src="/theorem2.png"/>
-            </div>
-        </section>
 
 <!-- TODO
         <section>
@@ -264,32 +301,70 @@ Proving somthing similar here is rather complicated since we are now working wit
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 42%" src="/figure8/step8.png"/> <!-- TODO highlight arrows -->
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 100%" src="/figure8/step8.png"/> <!-- TODO highlight arrows -->
                 <img class="" style="max-width: 75%" src="/figure9-stepbackcompensate.svg"/>
             </div>
         </section>
 
         <section>
             <div class="r-stack">
-                <img class="" style="max-width: 75%" src="/slide.png"/>
+                <img class="" style="max-width: 85%" src="/slide.png"/>
+            </div>
+        </section>
+
+        <!-- NOTE
+        **BRIDGE:** WebAssembly helps with the formalization of our technique ...
+
+        It is important for debuggers targetted at debugging non-deterministic programs that the observe the same behavior as the normal execution.
+        The original multiverse debugger GraphRedex proved that it exactly showed the same states as could be observed by the program semantics.
+Proving somthing similar here is rather complicated since we are now working without a model but an exact execution, and on top of that we are reversing output actions.
+
+        However, we have found a way to define the same kind of correctness criteria for our concrete multiverse debugger, and have split this into two theorems.
+
+        theorem 1 ... holds for our because ...
+
+        theorem 2 ... holds for our because ...
+        -->
+        <section class="">
+            <div class="r-stack">
+                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="/noninterference-full.png" />
+                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="/noninterference-zoom.png" />
+            </div>
+            <div class="citation">
+                <img class="tiny logo" src="/ecoop-logo.png" />
+                <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="max-width: 75%" src="/theorem1.png"/>
+            </div>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="max-width: 75%" src="/theorem2.png"/>
             </div>
         </section>
 
         <section>
           <div class="r-stack">
-            <img class="" style="width: 75%" src="/figure13-start.svg"/>
-            <img class="fragment custom zoom13" style="width: 75%" src="/figure13-zoom.svg"/>
+            <img class="" style="width: 85%" src="/figure13-start.svg"/>
+            <img class="fragment custom zoom13" style="width: 85%" src="/figure13-zoom.svg"/>
           </div>
         </section>
 
         <section>
-            <img class="" style="width: 60%" src="/figure14.svg"/>
+            <img class="" style="width: 70%" src="/figure14.svg"/>
         </section>
 
         <section class="title chapter" data-auto-animate data-background-image="/oopsla25/oopsla-background.png">
             <h1>MIO: Multiverse Debugging in the Face of Input/Output</h1>
 
-            <p class="authors"><b>Tom&nbsp;Lauwaerts</b>, Maarten&nbsp;Steevens, Christophe&nbsp;Scholliers</p>
+            <div id="people" class="three rows">
+            <p class="author"><b>Tom&nbsp;Lauwaerts</b></p> <p class="author">Maarten&nbsp;Steevens</p> <p class="author">Christophe&nbsp;Scholliers</p><span class="filler"></span>
+            <img src="public/people/tom.jpg"/><img src="public/people/maarten.jpg"/><img src="public/people/christophe.jpg"/></div>
             <!-- <a class="invisible link" href="https://www.ugent.be/"> -->
             <!-- <img id="ugent" class="logo" src="/ugent.png"  alt="Ghent University" /> -->
         </section>
