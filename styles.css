@@ -182,7 +182,7 @@ div.image {
 }
 
 .author {
-  width: 30%;
+    flex: 1 0 30%;;
 }
 
 div.citation {
@@ -201,11 +201,6 @@ img.logo {
 
 .tiny.logo {
     max-height: 3em;
-}
-
-pre, code {
-    width: 100%;
-    font-size: 0.7em;
 }
 
 .hljs-ln-n {
@@ -227,6 +222,9 @@ pre, code {
 
 #people {
   padding: 0 20vw;
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #people img {
@@ -240,17 +238,34 @@ pre, code {
     list-style-type: none;
 }
 
-#challenges {
+.reveal ul.challenges {
     max-width: 10vw;
     max-height: 10vw;
+    display: block;
+    padding: 0 15vw;
 }
 
-#challenges li {
+.challenges img, .challenge-icon {
+    margin-right: 5vw;
+    height: 15vh;
+}
+
+.challenges li {
   width: 100%;
   display: flex;
 }
 
-#challenges li p {
+.challenges li p {
     flex-grow: 1;
     min-width: 50vw;
+    max-height:
+}
+
+.reveal .no-margin {
+    margin: 0;
+}
+
+#example {
+    height: 27vw;
+    width: 50vw;
 }

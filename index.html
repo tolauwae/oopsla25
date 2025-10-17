@@ -29,25 +29,34 @@
 
         <section>
           <!-- data-background-image="/oopsla25/espressifboard.jpg" class="absolute" data-transition="none" data-auto-animate> -->
-          <div class="r-stack"> <!-- data-line-numbers="|6,9" -->
-          <pre><code data-trim data-noescape>
-function main(): void {
+          <div class="rows"> <!-- data-line-numbers="|6,9" -->
+          <pre id="example"><code data-trim data-noescape>
+function main(): void {function main(): void {
     const lowThreshold = 1000; const highThreshold = 2000;
-    const temp = analogRead(sensor);
     while (true) {
+      const temp = analogRead(sensor);
       if (temp < lowThreshold) {
-          digitalWrite(blueLED, HIGH); digitalWrite(redLED, LOW);
+          digitalWrite(blueLED, HIGH);
+          digitalWrite(redLED, LOW);
       }
       else if (temp < highThreshold) {
-          digitalWrite(redLED, LOW); digitalWrite(redLED, LOW);
+          digitalWrite(redLED, LOW);
+          digitalWrite(redLED, LOW);
       }
       else {
-          digitalWrite(blueLED, LOW); digitalWrite(redLED, HIGH);
+          digitalWrite(blueLED, LOW);
+          digitalWrite(redLED, HIGH);
       }
     }
 }
           </code>
           </pre>
+
+          <div class="r-stack">
+              <img style="width: 40vw" src="/leds/turnedoff.png" />
+              <img class="fragment" style="width: 40vw" src="/leds/blueturnedon.png" />
+              <img class="fragment" style="width: 40vw" src="/leds/redturnedon.png" />
+          </div>
           <!-- <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div> -->
           </div>
         </section>
@@ -63,31 +72,74 @@ function main(): void {
             ... en dit alles is correct: sound & complete
         -->
 
-        <section> <!-- TODO styling -->
-          <blockquote>
-            <b>74%</b> of surveyed participants say that IoT developers rely on access to devices to test and debug.
-          </blockquote>
+        <section>
+            <blockquote>
+                <b>74%</b> of surveyed participants say that IoT developers rely on access to devices to test and debug.
+            </blockquote>
 
-          <div class="citation">
-            <p class="">Makhshari A., Mesbah A. (2021). IoT Bugs and Development Challenges. ICSE '21</p>
-          </div>
+            <div class="citation">
+                <p class="">Makhshari A., Mesbah A. (2021). IoT Bugs and Development Challenges. ICSE '21</p>
+            </div>
         </section>
 
         <section>
             <div class="r-stack">
                 <img class="fragment shadow rounded custom blur-out" data-fragment-index="1" src="/githubissue2021.png" />
                 <img class="fragment shadow rounded fade-in-then-out" data-fragment-index="1" src="/githubissue2021-icepack1.png" />
-                <img class="fragment shadow rounded fade-in" data-fragment-index="2" src="/githubissue2021-icepack2.png" />
+                <img class="fragment shadow rounded fade-in-then-out" data-fragment-index="2" src="/githubissue2021-icepack2.png" />
+            </div>
+        </section>
+
+        <section>
+            <img class="shadow rounded" src="/githubissue2024.png" />
+        </section>
+
+        <section>
+            <!-- data-background-image="/oopsla25/espressifboard.jpg" class="absolute" data-transition="none" data-auto-animate> -->
+            <div class="rows"> <!-- data-line-numbers="|6,9" -->
+                <pre id="example"><code data-trim data-noescape>
+function main(): void {function main(): void {
+    const lowThreshold = 1000; const highThreshold = 2000;
+    while (true) {
+      const temp = analogRead(sensor);
+      if (temp < lowThreshold) {
+          digitalWrite(blueLED, HIGH);
+          digitalWrite(redLED, LOW);
+      }
+      else if (temp < highThreshold) {
+          digitalWrite(redLED, LOW);
+          digitalWrite(redLED, LOW);
+      }
+      else {
+          digitalWrite(blueLED, LOW);
+          digitalWrite(redLED, HIGH);
+      }
+    }
+}
+          </code>
+          </pre>
+
+                <div class="r-stack">
+                    <img style="width: 40vw" src="/leds/turnedoff.png" />
+                    <img class="fragment" style="width: 40vw" src="/leds/blueturnedon.png" />
+                </div>
+                <!-- <div class="absolute attribution">Photo by <b>Vishnu Mohanan</b> on <b>Unsplash</b></div> -->
             </div>
         </section>
 
         <section>
             <h1>Challenges in Debugging</h1>
-            <ul id="challenges" class="">
-                <li class="fragment"><img src="public/challenges/icepack.png" /> <p>Exploring non-deterministic input in programs on microcontrollers.</p></li>
-                <li class="fragment"><img src="public/challenges/reversibility.png" /> <p>How to get reverse debugging while keeping output consistent.</p></li>
+            <ul class="challenges">
+                <li data-id="challenge1" class="fragment"><img src="public/challenges/icepack.png" /> <p>Exploring non-deterministic input in programs on microcontrollers.</p></li>
+                <li class="fragment"><img src="public/challenges/reversibility.png" /> <p>How to get reverse debugging while keeping output consistent?</p></li>
                 <li class="fragment"><img src="public/challenges/microcontroller.png" /> <p>Microcontrollers have very few resources.</p></li>
                 <li class="fragment"><img src="public/challenges/formalism.png" /> <p>We want this debugger to be grounded on a sound formalism.</p></li>
+            </ul>
+        </section>
+
+        <section>
+            <ul class="challenges">
+                <li data-id="challenge1" class=""><img src="public/challenges/icepack.png" /> <p>Exploring non-deterministic input in programs on microcontrollers.</p></li>
             </ul>
         </section>
 
@@ -121,8 +173,8 @@ function main(): void {
                    src="/graphredex.mp4"></video>-->
         </section>
 
+        <!--
         <section class="normal">
-            <!-- Papers -->
             <div class="r-stack">
                 <img class="shadow pdf"
                      style="margin-left: 15vw; margin-top: 0"
@@ -142,32 +194,51 @@ function main(): void {
             <div class="citation">
             </div>
         </section>
+        -->
 
-        <section class="normal">
-            <h1><ul><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
+        <section class="normal" data-auto-animate>
+            <h1><ul class="no-margin"><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
             <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
         </section>
 
-        <section data-auto-animate>
+        <section class="normal" data-auto-animate>
+            <h1><ul class="no-margin"><li>M</li><li class="io">I</li><li class="io">O</li></ul></h1>
+            <h2><span class="light">/maː.joː/</span><span> a Multiverse debugger for </span><span class="io">I/O</span></h2>
+            <img style="max-width: 15vw" src="/warduino-logo.png" />
+        </section>
+
+        <section data-auto-animate data-auto-animate-restart>
           <div class="r-stack">
-            <img class="fragment custom blur-out" data-id="mio" data-fragment-index="1" src="/mio-screenshot-large.png"/>
-            <img class="fragment fade-in-then-out" style="" data-fragment-index="1" src="/mock.png" />
-            <img class="fragment fade-in" style="" data-fragment-index="2" src="/mio-screenshot-tree.png" /> <!-- TODO make screenshot -->
+            <img class="fragment custom blur-out" data-id="mio" data-fragment-index="1" src="/mio-screenshot.png"/>
+            <img class="fragment fade-in" style="" data-fragment-index="1" src="/mio-screenshot-tree.png" /> <!-- TODO make screenshot -->
+            <img class="fragment fade-in-then-out" style="" data-fragment-index="2" src="/mock.png" />
           </div>
         </section>
 
-        <section data-auto-animate>
-            <h1>How did we build MIO?</h1>
-            
-            <div class="r-stack">
-                <img class="fragment custom blur-out" data-id="mio" data-fragment-index="1" src="/mio-screenshot-large.png"/>
-                <img class="fragment fade-in" style="max-width: 15vw" data-fragment-index="1" src="/warduino-logo.png" />
-            </div>
+        <section>
+            <ul class="challenges">
+                <li class=""><img src="public/challenges/reversibility.png" /> <p>How to get reverse debugging while keeping output consistent?</p></li>
+            </ul>
+            <!-- TODO add screenshot with jump -->
         </section>
+
+        <!-- TODO confetti cannon -->
 
         <section>
             <img style="width: 50%" src="/debugstate.svg"/>
             <img class="fragment" style="width: 50%" src="/snapshotdef.svg"/>
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="max-width: 85%" src="/slide-screenshot.png"/>
+            </div>
+        </section>
+
+        <section>
+            <ul class="challenges">
+                <li class=""><img src="public/challenges/microcontroller.png" /> <p>Microcontrollers have very few resources.</p></li>
+            </ul>
         </section>
 
         <!--
@@ -264,6 +335,7 @@ function main(): void {
             </div>
         </section>
 
+        <!--
         <section data-auto-animate="">
             <div class="">
                 <img class="" data-id="figure8" style="max-width: 75%" src="/figure8/step8.png"/>
@@ -301,15 +373,21 @@ function main(): void {
 
         <section data-auto-animate="">
             <div class="">
-                <img class="" data-id="figure8" style="max-width: 75%; opacity: 100%" src="/figure8/step8.png"/> <!-- TODO highlight arrows -->
+                <img class="" data-id="figure8" style="max-width: 75%; opacity: 100%" src="/figure8/step8.png"/> TODO highlight arrows
                 <img class="" style="max-width: 75%" src="/figure9-stepbackcompensate.svg"/>
+            </div>
+        </section>
+        -->
+
+        <section>
+            <div class="r-stack">
+                <img class="" style="width: 85%" src="/figure13-start.svg"/>
+                <img class="fragment custom zoom13" style="width: 85%" src="/figure13-zoom.svg"/>
             </div>
         </section>
 
         <section>
-            <div class="r-stack">
-                <img class="" style="max-width: 85%" src="/slide.png"/>
-            </div>
+            <img class="" style="width: 70%" src="/figure14.svg"/>
         </section>
 
         <!-- NOTE
@@ -325,6 +403,13 @@ Proving somthing similar here is rather complicated since we are now working wit
 
         theorem 2 ... holds for our because ...
         -->
+
+        <section>
+            <ul class="challenges">
+                <li class=""><img src="public/challenges/formalism.png" /> <p>We want this debugger to be grounded on a sound formalism.</p></li>
+            </ul>
+        </section>
+
         <section class="">
             <div class="r-stack">
                 <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="/noninterference-full.png" />
@@ -348,25 +433,16 @@ Proving somthing similar here is rather complicated since we are now working wit
             </div>
         </section>
 
-        <section>
-          <div class="r-stack">
-            <img class="" style="width: 85%" src="/figure13-start.svg"/>
-            <img class="fragment custom zoom13" style="width: 85%" src="/figure13-zoom.svg"/>
-          </div>
-        </section>
-
-        <section>
-            <img class="" style="width: 70%" src="/figure14.svg"/>
-        </section>
-
-        <section class="title chapter" data-auto-animate data-background-image="/oopsla25/oopsla-background.png">
+        <section class="title chapter" data-auto-animate data-background-image="/oopsla25/qrs/oopsla-background-qrs.png">
             <h1>MIO: Multiverse Debugging in the Face of Input/Output</h1>
 
             <div id="people" class="three rows">
-            <p class="author"><b>Tom&nbsp;Lauwaerts</b></p> <p class="author">Maarten&nbsp;Steevens</p> <p class="author">Christophe&nbsp;Scholliers</p><span class="filler"></span>
-            <img src="public/people/tom.jpg"/><img src="public/people/maarten.jpg"/><img src="public/people/christophe.jpg"/></div>
-            <!-- <a class="invisible link" href="https://www.ugent.be/"> -->
-            <!-- <img id="ugent" class="logo" src="/ugent.png"  alt="Ghent University" /> -->
+            <p class="author"><b>Tom&nbsp;Lauwaerts</b></p> <p class="author">Maarten&nbsp;Steevens</p> <p class="author">Christophe&nbsp;Scholliers</p><div class="filler"></div>
+                <div class="author"><img src="public/people/tom.jpg"/></div>
+            <div class="author"><img src="public/people/maarten.jpg"/></div>
+            <div class="author"><img src="public/people/christophe.jpg"/></div>
+            </div>
+            <!-- TODO add links -->
         </section>
 
     </div>
