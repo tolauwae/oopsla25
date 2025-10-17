@@ -128,7 +128,7 @@ function main(): void {function main(): void {
         </section>
 
         <section>
-            <h1>Challenges in Debugging</h1>
+            <h1>Challenges in Debugging Microcontrollers</h1>
             <ul class="challenges">
                 <li data-id="challenge1" class="fragment"><img src="public/challenges/icepack.png" /> <p>Exploring non-deterministic input in programs on microcontrollers.</p></li>
                 <li class="fragment"><img src="public/challenges/reversibility.png" /> <p>How to get reverse debugging while keeping output consistent?</p></li>
@@ -225,18 +225,18 @@ function main(): void {function main(): void {
         <!-- TODO confetti cannon -->
 
         <section data-auto-animate>
-            <img style="width: 50%" src="/debugstate.svg"/>
             <img class="fragment" data-id="snapshotdef" style="width: 50%" src="/snapshotdef.svg"/>
         </section>
 
         <section data-auto-animate>
-            <img style="width: 50%" src="/debugstate.svg"/>
             <img class="" data-id="snapshotdef" style="width: 50%" src="/snapshotdef-warduino.svg"/>
         </section>
 
         <section>
             <div class="r-stack">
-                <img class="" style="max-width: 85%" src="/slide-screenshot.png"/>
+                <img class="fragment custom blur-out" data-fragment-index="1" style="max-width: 85%" src="/slide-screenshot.png"/>
+                <img class="fragment shadow" style="max-width: 70%" data-fragment-index="1" style="" src="/slide.png"/>
+                
             </div>
         </section>
 
@@ -335,8 +335,7 @@ function main(): void {function main(): void {
                 <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step4.png"/>
                 <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step5.png"/>
                 <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step6.png"/>
-                <img class="fragment fade-in" style="max-width: 75%" src="/figure8/step7.png"/>
-                <img class="fragment fade-in" data-id="figure8" style="max-width: 75%" src="/figure8/step8.png"/>
+                <img class="fragment fade-in" data-id="figure8" style="max-width: 75%" src="/figure8/step7.png"/>
             </div>
         </section>
 
@@ -413,17 +412,6 @@ Proving somthing similar here is rather complicated since we are now working wit
             <ul class="challenges">
                 <li class=""><img src="public/challenges/formalism.png" /> <p>We want this debugger to be grounded on a sound formalism.</p></li>
             </ul>
-        </section>
-
-        <section class="">
-            <div class="r-stack">
-                <img class="shadow pdf fragment custom blur-out" data-fragment-index="1" src="/noninterference-full.png" />
-                <img class="shadow pdf fragment fade-in" data-fragment-index="1" src="/noninterference-zoom.png" />
-            </div>
-            <div class="citation">
-                <img class="tiny logo" src="/ecoop-logo.png" />
-                <p class="">Carmen Torres Lopez, Robbert Gurdeep Singh, Stefan Marr, Elisa Gonzalez Boix, and Christophe Scholliers. Multiverse Debugging: Non-Deterministic Debugging for Non-Deterministic Programs (Brave New Idea Paper). In 33rd European Conference on Object-Oriented Programming (ECOOP 2019).</p>
-            </div>
         </section>
 
         <section>
