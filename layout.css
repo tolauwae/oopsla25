@@ -6,3 +6,8 @@
 .filler {
   flex-grow: 1;
 }
+
+div.three p {
+  flex-grow: 1;
+  width: 33%;
+}
